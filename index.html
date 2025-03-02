@@ -32,6 +32,27 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
         }
+        .header img {
+            max-width: 100%;
+            max-height: 200px; /* Batasi tinggi gambar agar tidak terlalu besar */
+            width: auto;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+            object-fit: contain; /* Pastikan gambar proporsional */
+        }
+        .header h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .header h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        .header p {
+            font-size: 1em;
+            margin: 5px 0;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -232,7 +253,7 @@
             text-decoration: none;
             font-size: 1.1em;
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+            box-shadow: 0 0 15px rgba(0, 255, 107, 0.6);
         }
         .quiz-link:hover {
             background: rgba(255, 107, 107, 1);
@@ -272,6 +293,18 @@
             .header {
                 width: 95%;
                 padding: 15px;
+            }
+            .header img {
+                max-height: 150px; /* Kurangi tinggi gambar untuk layar sedang */
+            }
+            .header h2 {
+                font-size: 1.5em;
+            }
+            .header h3 {
+                font-size: 1.3em;
+            }
+            .header p {
+                font-size: 0.9em;
             }
             .container {
                 padding: 10px;
@@ -327,14 +360,19 @@
                 width: 98%;
                 padding: 10px;
             }
+            .header img {
+                max-height: 120px; /* Kurangi tinggi gambar untuk layar kecil */
+                max-width: 90%; /* Pastikan lebar tidak melebihi container */
+            }
             .header h2 {
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             .header h3 {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
             .header p {
-                font-size: 0.9em;
+                font-size: 0.85em;
+                line-height: 1.4; /* Beri jarak antar baris untuk keterbacaan */
             }
             .container {
                 padding: 5px;
@@ -394,8 +432,8 @@
         <h3>Pemrograman Terstruktur</h3>
         <p><em>Praktikum 7: array</em></p>
         <img src="img/11.png" alt="Logo Kampus">
-        <p>Nama : <em>Eka Kurniawan Zein</em></p>
-        <p>NIM : <em>24026004</em></p>
+        <p>Nama: <em>Eka Kurniawan Zein</em></p>
+        <p>NIM: <em>24026004</em></p>
         <p><strong>PROGRAM STUDI D3 TEKNOLOGI INFORMASI<br>POLITEKNIK SEMEN INDONESIA GRESIK</strong></p>
         <p><em>01/03/2025</em></p>
     </div>
@@ -578,7 +616,7 @@ return 0;
     <script>
         particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 80 }, // Kurangi jumlah partikel di mobile
+                "number": { "value": 80 },
                 "color": { "value": "#ffffff" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.5, "random": true },
